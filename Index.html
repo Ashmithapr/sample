@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevSpace | Ashmitha</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1c1b1b",
+                    "error-container": "#93000a",
+                    "outline": "#ac878f",
+                    "on-surface-variant": "#e5bcc4",
+                    "surface-container-high": "#2a2a2a",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#00a0aa",
+                    "primary-container": "#ff4b89",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container": "#1f1f1f",
+                    "on-primary-container": "#590026",
+                    "tertiary-fixed-dim": "#00dbe9",
+                    "tertiary-fixed": "#7df4ff",
+                    "on-background": "#e2e2e2",
+                    "outline-variant": "#5c3f45",
+                    "inverse-primary": "#bb0058",
+                    "surface-container-highest": "#353535",
+                    "primary-fixed": "#ffd9e0",
+                    "on-tertiary-fixed": "#002022",
+                    "on-surface": "#e2e2e2",
+                    "on-primary-fixed-variant": "#8f0041",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-bright": "#393939",
+                    "secondary": "#c8c6c5",
+                    "on-error": "#690005",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed-variant": "#474646",
+                    "inverse-on-surface": "#303030",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-tertiary": "#00363a",
+                    "on-primary-fixed": "#3f0019",
+                    "background": "#131313",
+                    "surface": "#131313",
+                    "primary": "#7184d5",
+                    "on-tertiary-container": "#002f33",
+                    "tertiary": "#00dbe9",
+                    "secondary-container": "#4a4949",
+                    "on-secondary-container": "#bab8b7",
+                    "surface-container-low": "#1b1b1b",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-fixed-dim": "#ffb1c3",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "on-secondary": "#313030",
+                    "on-primary": "#7a7a8f",
+                    "surface-variant": "#353535",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#ffb1c3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "display": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #10131b; color: #e2e2e2; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .glass-nav {
+            background: #10131b;
+            backdrop-filter: blur(24px);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px #7184d5;
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #13142b 0%, #0e0e2c 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Masonry-like spacing */
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        .masonry-item:nth-child(even) {
+            margin-top: 2rem;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+
+  <style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar (Small Center Aligned) -->
+<header class="sticky top-0 z-50 glass-nav">
+<div class="px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+<span class="font-display font-extrabold text-2xl tracking-tight">Ashmitha P</span>
+<p class="font-display font-extrabold text-2xl tracking-tight">
+    | Packaged App development Senior Analyst
+</p>
+
+</div>
+<!-- <div class="flex-1 max-w-md mx-8 hidden md:block">
+<div class="relative group">
+<input class="w-full bg-surface-container-highest border-none rounded-full py-2 px-10 text-sm focus:ring-1 focus:ring-primary placeholder-on-surface-variant transition-all" placeholder="Search projects..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+</div>
+</div> -->
+<!-- <div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant">search</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="Profile" data-alt="A professional headshot of a creative director in a moody studio setting with dramatic neon pink and blue backlighting. The subject is wearing a sleek black turtleneck and looking confidently at the camera. The style is cinematic and high-contrast, perfectly aligning with the dark noir aesthetic of the digital portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgv8B32ex4m4F-xVUTQuptzQtlnFqwx6CfHN1xlPhB_qXB9mPVJobJMtoOTdgBQb-A-amwCrzw8kYLXw1WbRIdZKhp5y57hz9nBpZAS7G6a_Xaf24KG-LrqOYiVQlG5gpksMbkJhmKuKtoy9EpujGsf19zSAiXzhxA-msm2mdFiAH3mqALMtgS-0g8wh9Tp2gbFTTajd16pdnudqsKMT6HdtsTRzApIceRfjsmjYr2aPJsAO-i0xFwtSRNzNtoL2eOZsi4Uc6jsS3X"/>
+</div> -->
+</div>
+</div>
+<!-- Category Tags (Scrollable) -->
+<!-- <div class="px-6 py-4 flex gap-3 overflow-x-auto no-scrollbar">
+<a href="Index.html" class="px-5 py-1.5 rounded-full primary-gradient text-on-primary text-xs font-bold whitespace-nowrap">Home</a>
+<a href="#journey" class="px-5 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-xs font-medium whitespace-nowrap">Journey</a>
+<a href="#techstack" class="px-5 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-xs font-medium whitespace-nowrap">Tech stack</a>
+<button class="px-5 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-xs font-medium whitespace-nowrap">Projects</button>
+<button class="px-5 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-xs font-medium whitespace-nowrap">Experience</button>
+<button class="px-5 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-xs font-medium whitespace-nowrap">Connect</button>
+</div> -->
+</header>
+<main class="flex-1 px-6 pb-32 max-w-7xl mx-auto w-full">
+<!-- Featured Projects Section (Masonry) -->
+<section class="mt-10">
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="text-primary text-xs font-bold uppercase tracking-widest block mb-2">Portfolio</span>
+<h2 class="text-3xl md:text-5xl font-display font-bold">............................</h2>
+</div>
+<!-- <button class="text-primary font-bold text-sm hidden md:block">Explore All</button> -->
+</div>
+
+<!-- Navigation Section -->
+<section class="w-full flex justify-center py-6 sticky top-0 z-50">
+
+  <div class="flex gap-3 overflow-x-auto no-scrollbar px-5 py-4
+              rounded-[999px]
+              border border-slate-700/40
+              bg-slate-900/70
+              backdrop-blur-2xl
+              shadow-[0_0_30px_rgba(59,130,246,0.12)]">
+
+    <!-- Active -->
+    <a href="Index.html"
+       class="px-6 py-2.5 rounded-full
+              bg-gradient-to-r from-blue-500 to-indigo-500
+              text-white text-xs font-semibold whitespace-nowrap
+              hover:scale-105 transition-all duration-300">
+      Home
+    </a>
+
+    <!-- Others -->
+    <a href="#experience"
+       class="px-6 py-2.5 rounded-full
+              bg-slate-800/80 text-slate-300
+              text-xs font-medium whitespace-nowrap
+              border border-slate-700/40
+              hover:bg-slate-700/80
+              hover:text-white
+              transition-all duration-300">
+      Experience
+    </a>
+
+    <a href="#techstack"
+       class="px-6 py-2.5 rounded-full
+              bg-slate-800/80 text-slate-300
+              text-xs font-medium whitespace-nowrap
+              border border-slate-700/40
+              hover:bg-slate-700/80
+              hover:text-white
+              transition-all duration-300">
+      Tech Stack
+    </a>
+
+    <a href="#projects"
+       class="px-6 py-2.5 rounded-full
+              bg-slate-800/80 text-slate-300
+              text-xs font-medium whitespace-nowrap
+              border border-slate-700/40
+              hover:bg-slate-700/80
+              hover:text-white
+              transition-all duration-300">
+      Projects
+    </a>
+
+    <a href="#learning"
+       class="px-6 py-2.5 rounded-full
+              bg-slate-800/80 text-slate-300
+              text-xs font-medium whitespace-nowrap
+              border border-slate-700/40
+              hover:bg-slate-700/80
+              hover:text-white
+              transition-all duration-300">
+      Learning
+    </a>
+
+    <a href="#connect"
+       class="px-6 py-2.5 rounded-full
+              bg-slate-800/80 text-slate-300
+              text-xs font-medium whitespace-nowrap
+              border border-slate-700/40
+              hover:bg-slate-700/80
+              hover:text-white
+              transition-all duration-300">
+      Connect
+    </a>
+
+  </div>
+
+</section>
+
+<!-- Experience START -->
+<div class="masonry-grid">
+<div id="experience" class="scroll-mt-28 masonry-item group cursor-pointer w-full col-span-full">
+<div class="aspect-[18/5] rounded-lg overflow-hidden bg-surface-container relative mb-4">
+<!-- Dark Background -->
+<div class="absolute inset-0 bg-[#060816]"></div>
+<!-- Blue Glow -->
+<div class="absolute top-[-120px] left-[-80px] w-[420px] h-[420px]
+bg-cyan-500/30 rounded-full blur-3xl"></div>
+<!-- Indigo Glow -->
+<div class="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px]
+bg-indigo-500/20 rounded-full blur-3xl"></div>
+<!-- Purple Glow -->
+<div class="absolute top-[35%] left-[40%] w-[300px] h-[300px]
+bg-violet-500/20 rounded-full blur-3xl"></div>
+<!-- Glass Blur -->
+<div class="absolute inset-0 backdrop-blur-xl"></div>
+<div class="absolute inset-0 z-10 flex flex-col justify-start p-6 md:p-10 pt-12">
+
+  <!-- Heading -->
+  <h3 class="text-2xl md:text-4xl font-bold mb-6 tracking-wide">
+    Experience
+  </h3>
+
+  <!-- Content Grid -->
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Accenture -->
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+      <h4 class="text-lg font-semibold mb-3 text-cyan-300">
+        Accenture
+      </h4>
+
+      <div class="space-y-3">
+        <div>
+          <p class="font-medium">Masters of Computer Applications</p>
+          <p class="text-sm text-gray-300">
+            AIMIT St. Aloysius College, Mangalore
+          </p>
+          <p class="text-xs text-gray-400">
+            2020 - 2022
+          </p>
+        </div>
+        <div>
+          <p class="font-medium">Bachelors of Computer Applications</p>
+          <p class="text-sm text-gray-300">
+            Vivekananda college of Art, Science & commerce, Puttur
+          </p>
+          <p class="text-xs text-gray-400">
+            2017 - 2020
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Infosys -->
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+      <h4 class="text-lg font-semibold mb-3 text-violet-300">
+        Infosys Limited
+      </h4>
+
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• Infosys certified IIB Developer</li>
+        <li>• Boomi Associate Integration Developer</li>
+        <li>• Google Cloud AI skill badges</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Experience END -->
+
+<!-- TECH STACK START-->
+ <div class="masonry-grid">
+<div id="techstack" class="scroll-mt-28 masonry-item group cursor-pointer w-full col-span-full">
+<div class="aspect-[20/5] rounded-lg overflow-hidden bg-surface-container relative mb-4">
+<!-- Dark Background -->
+<div class="absolute inset-0 bg-[#060816]"></div>
+<!-- Emerald Glow -->
+<div class="absolute top-[-120px] left-[-80px] w-[420px] h-[420px]
+bg-emerald-500/25 rounded-full blur-3xl"></div>
+<!-- Sky Blue Glow -->
+<div class="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px]
+bg-sky-500/20 rounded-full blur-3xl"></div>
+<!-- Teal Glow -->
+<div class="absolute top-[35%] left-[40%] w-[300px] h-[300px]
+bg-teal-500/20 rounded-full blur-3xl"></div>
+<!-- Glass Blur -->
+<div class="absolute inset-0 backdrop-blur-xl"></div>
+<div class="absolute inset-0 z-10 flex flex-col justify-start p-6 md:p-10 pt-12">
+
+  <!-- Heading -->
+  <h3 class="text-2xl md:text-4xl font-bold mb-6 tracking-wide">
+    Tech Stack
+  </h3>
+  <h6>Building scalable integrations, APIs, and automation workflows
+to connect enterprise systems seamlessly.</h6>
+
+  <!-- Content Grid -->
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Certifications -->
+    <!-- <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+      <h4 class="text-lg font-semibold mb-3 text-violet-300">
+        Certifications
+      </h4> -->
+
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• IBM App Connect Enterprise (ACE)</li>
+        <li>• IBM Integration Bus (IIB)</li>
+        <li>• API & Integration</li>
+        <li>• Workato</li>
+        <li>• Apigee</li>
+        <li>• Workflow Automation</li>
+        
+      </ul>
+    <!-- </div> -->
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- TECH STACK END -->
+
+
+<!-- Projects START -->
+<div class="masonry-grid">
+<div id="projects" class="scroll-mt-28 masonry-item group cursor-pointer w-full col-span-full">
+<div class="aspect-[18/8] rounded-lg overflow-hidden bg-surface-container relative mb-4">
+<!-- Dark Background -->
+<div class="absolute inset-0 bg-[#060816]"></div>
+<!-- Blue Glow -->
+<div class="absolute top-[-120px] left-[-80px] w-[420px] h-[420px]
+bg-cyan-500/30 rounded-full blur-3xl"></div>
+<!-- Indigo Glow -->
+<div class="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px]
+bg-indigo-500/20 rounded-full blur-3xl"></div>
+<!-- Purple Glow -->
+<div class="absolute top-[35%] left-[40%] w-[300px] h-[300px]
+bg-violet-500/20 rounded-full blur-3xl"></div>
+<!-- Glass Blur -->
+<div class="absolute inset-0 backdrop-blur-xl"></div>
+<div class="absolute inset-0 z-10 flex flex-col justify-start p-6 md:p-10 pt-12">
+
+  <!-- Heading -->
+  <h3 class="text-2xl md:text-4xl font-bold mb-6 tracking-wide">
+    Projects
+  </h3>
+
+  <!-- Content Grid -->
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Education -->
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+      <h4 class="text-lg font-semibold mb-3 text-violet-300">
+        Middleware Integration
+      </h4>
+
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• Worked on IBM IIB, ACE, and IBM MQ middleware applications.</li>
+        <li>• Contributed to both development and production support activities.</li>
+        <li>• Supported 210+ enterprise applications and monitored transactional flows</li>
+        <li>• Developed message flows using MQ, File, HTTP, and SOAP nodes.</li>
+        <li>• Designed message transformations using XMLNSC, DFDL, and JSON.</li>
+        <li>• Performed SSL certificate imports across environments.</li>
+        <li>• Cloned and configured non-production environments before deadlines.</li>
+        <li>• Participated in IBM MQ and ACE migration/upgrade activities.</li>
+        <li>• Managed remediation and testing for Oracle R12 interface upgrades.</li>
+        <li>• Collaborated with teams to deliver business integration solutions.</li>
+        <li>• Participated in Disaster Recovery (DR) drill activities.</li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+      <h4 class="text-lg font-semibold mb-3 text-violet-300">
+        Certifications
+      </h4>
+
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• Infosys certified IIB Developer</li>
+        <li>• Boomi Associate Integration Developer</li>
+        <li>• Google Cloud AI skill badges</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Projects END -->
+
+
+<!-- Learning START -->
+<div class="masonry-grid">
+<div id="learning" class="scroll-mt-28 masonry-item group cursor-pointer w-full col-span-full">
+<div class="aspect-[18/5] rounded-lg overflow-hidden bg-surface-container relative mb-4">
+<!-- Dark Background -->
+<div class="absolute inset-0 bg-[#060816]"></div>
+<!-- Blue Glow -->
+<div class="absolute top-[-120px] left-[-80px] w-[420px] h-[420px]
+bg-cyan-500/30 rounded-full blur-3xl"></div>
+<!-- Indigo Glow -->
+<div class="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px]
+bg-indigo-500/20 rounded-full blur-3xl"></div>
+<!-- Purple Glow -->
+<div class="absolute top-[35%] left-[40%] w-[300px] h-[300px]
+bg-violet-500/20 rounded-full blur-3xl"></div>
+<!-- Glass Blur -->
+<div class="absolute inset-0 backdrop-blur-xl"></div>
+<div class="absolute inset-0 z-10 flex flex-col justify-start p-6 md:p-10 pt-12">
+
+  <!-- Heading -->
+  <h3 class="text-2xl md:text-4xl font-bold mb-6 tracking-wide">
+    Learning and Certifications
+  </h3>
+
+  <!-- Content Grid -->
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Education -->
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+      <h4 class="text-lg font-semibold mb-3 text-cyan-300">
+        Education
+      </h4>
+
+      <div class="space-y-3">
+        <div>
+          <p class="font-medium">Masters of Computer Applications</p>
+          <p class="text-sm text-gray-300">
+            AIMIT St. Aloysius College, Mangalore
+          </p>
+          <p class="text-xs text-gray-400">
+            2020 - 2022
+          </p>
+        </div>
+        <div>
+          <p class="font-medium">Bachelors of Computer Applications</p>
+          <p class="text-sm text-gray-300">
+            Vivekananda college of Art, Science & commerce, Puttur
+          </p>
+          <p class="text-xs text-gray-400">
+            2017 - 2020
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+      <h4 class="text-lg font-semibold mb-3 text-violet-300">
+        Certifications
+      </h4>
+
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• Infosys certified IIB Developer</li>
+        <li>• Boomi Associate Integration Developer</li>
+        <li>• Google Cloud AI skill badges</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Learning END -->
+
+
+<!-- Connect START -->
+<div class="masonry-grid">
+<div id="learning" class="scroll-mt-28 masonry-item group cursor-pointer w-full col-span-full">
+<div class="aspect-[18/5] rounded-lg overflow-hidden bg-surface-container relative mb-4">
+<!-- Dark Background -->
+<div class="absolute inset-0 bg-[#060816]"></div>
+<!-- Emerald Glow -->
+<div class="absolute top-[-120px] left-[-80px] w-[420px] h-[420px]
+bg-emerald-500/25 rounded-full blur-3xl"></div>
+<!-- Sky Blue Glow -->
+<div class="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px]
+bg-sky-500/20 rounded-full blur-3xl"></div>
+<!-- Teal Glow -->
+<div class="absolute top-[35%] left-[40%] w-[300px] h-[300px]
+bg-teal-500/20 rounded-full blur-3xl"></div>
+<!-- Glass Blur -->
+<div class="absolute inset-0 backdrop-blur-xl"></div>
+<div class="absolute inset-0 z-10 flex flex-col justify-start p-6 md:p-10 pt-12">
+
+  <!-- Heading -->
+  <h3 class="text-2xl md:text-4xl font-bold mb-6 tracking-wide">
+    Connect
+  </h3>
+
+  <!-- Content Grid -->
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Connect -->
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+
+      <!-- Email -->
+  <a href="mailto:yourmail@gmail.com" 
+     class="flex items-center gap-3 hover:text-white transition">
+    📧 <span>ashmithabirwas@gmail.com</span>
+  </a>
+
+  <!-- Phone -->
+  <a href="tel:+919876543210" 
+     class="flex items-center gap-3 hover:text-white transition">
+    📱 <span>+91 8277141345</span>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/ashmitha-p-422529213/" 
+     target="_blank"
+     class="flex items-center gap-3 hover:text-blue-400 transition">
+    💼 <span>LinkedIn</span>
+  </a>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Connect END -->
+
+
+<!-- Project 2 -->
+<!-- <div class="masonry-item group cursor-pointer">
+<div class="aspect-[4/5] rounded-lg overflow-hidden bg-surface-container relative mb-4">
+<img alt="Design System X" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist design system presentation featuring sleek typography and floating interface components. The aesthetic uses a monochrome palette of deep grays and vibrant magenta accents. Soft shadows and glassmorphic panels create a tactile, layered feel in a darkened studio environment. The image exudes high-end professionalism and modern editorial design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgJw-7rweeJfjBMOxbsYhPzYQ8KKrftBRYBrshX1Gr6OUlseroGbG66sv86_mMo_aknOUG3qhlW7gOsGFODaNGIwtYFuZy99TYvblKY9-jcD40auGmVlTmHGlyVPfoAiTrSOYEdemPTJL9Cc6n9YeU8G3TPlN9RHlsy9Pteuu37STSVS5K7J4QvnoDOhQ56oP3m7nFVojvFb4HpmgVYAsjrVo7T37CaYlgNpm_fDHUSLsEm59J0JESmpc9W3jEYEBZk7QwsONnRhGe"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="text-[10px] font-bold text-primary tracking-tighter uppercase mb-1 block">System Architecture • 2023</span>
+<h3 class="text-xl font-display font-bold">Design System X</h3>
+</div>
+</div>
+<button class="w-full py-3 rounded-full bg-surface-variant/40 backdrop-blur-md text-on-surface text-xs font-bold hover:bg-surface-variant/60 transition-colors uppercase tracking-widest">View Case Study</button>
+</div> -->
+<!-- Project 3 -->
+<!-- <div class="masonry-item group cursor-pointer">
+<div class="aspect-[4/5] rounded-lg overflow-hidden bg-surface-container relative mb-4">
+<img alt="Neural Interface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A retro-futuristic digital terminal showing lines of glowing cyan code and 3D wireframe models. The setting is a dark tech laboratory illuminated only by the light of multiple screens. The style is gritty yet polished, evoking a cinematic noir aesthetic with deep shadows and sharp, vibrant highlights of tertiary blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPaBT6pG3g3eQZnJ9Sn0_IHyLO1FSie2aSD9qYZ-e8I-4w9UU6uyH4_yMOuJi9SDImG0DvkO7HvW8Tu1pzbOshV2HqMT-m2KA7YfIiVZnqDwoJIkXjGExJIPPhH8tqQZtNivyYYOoS0wFoOl3MXnW_o-ekeePDk2d4NkOGoNaPdFgVLB0oVUSRuzGBQSG2HUgSAkk-rjVeUVrlK4G9UNcTh7tIwY0gknL1zzLNxvmBdXFC1WICwjeO4CbWEeURWnWy5tfIYQpgopf4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="text-[10px] font-bold text-primary tracking-tighter uppercase mb-1 block">Motion Graphics • 2024</span>
+<h3 class="text-xl font-display font-bold">Neural Interface</h3>
+</div>
+</div>
+<button class="w-full py-3 rounded-full bg-surface-variant/40 backdrop-blur-md text-on-surface text-xs font-bold hover:bg-surface-variant/60 transition-colors uppercase tracking-widest">View Case Study</button>
+</div> -->
+<!-- Project 4 -->
+<!-- <div class="masonry-item group cursor-pointer">
+<div class="aspect-[4/5] rounded-lg overflow-hidden bg-surface-container relative mb-4">
+<img alt="Fluidity Concept" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract fluid 3D shapes in vibrant shades of pink and magenta swirling in a dark void. The textures look like liquid light or captured energy, with soft glows reflecting off the surfaces. This artistic composition is clean, high-impact, and futuristic, perfectly representing high-end creative visual design in a pitch-black cinematic environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQjlpLCe8-SVBFaIIQ_1dDlzPB9ImVFxrztNmLkkGhfLZW6GfRvnC-z0BbCRIDdUcLUm9aa3W1iIV-_lCQ77GrOmoDhsT_YYG6RCrD57UABXZPC7AtUHkL8HPVG1l0R20AsJaxdYBZT_OOw-UXnyVkoh08Q_EJ8g8FvMq0jsbghvRFTru4CxBFwKfE8ItliYxSzCcJHXVDcXHwN9C3pHWnketDqKSzXX3Q6co76qVOYuguANNt7XJGcTBdfTFnFwDX9Kfwc6Eo4ACO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="text-[10px] font-bold text-primary tracking-tighter uppercase mb-1 block">Art Direction • 2023</span>
+<h3 class="text-xl font-display font-bold">Fluidity Concept</h3>
+</div>
+</div>
+<button class="w-full py-3 rounded-full bg-surface-variant/40 backdrop-blur-md text-on-surface text-xs font-bold hover:bg-surface-variant/60 transition-colors uppercase tracking-widest">View Case Study</button>
+</div> -->
+</div>
+</section>
+<!-- About Me / Inspiration Section -->
+<section class="mt-24 bg-surface-container-low rounded-lg overflow-hidden p-8 md:p-12 border border-outline-variant/10">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/3 aspect-square rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="Creative Director" class="w-full h-full object-cover" data-alt="A portrait of a male creative professional in a dark, atmospheric studio. The lighting is low-key, highlighting the contours of the face with a subtle warm glow. He is surrounded by high-tech equipment and artistic sketches blurred in the background. The mood is contemplative and serious, conveying a sense of artistic authority and meticulous attention to detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHs167jFeRERM8EkM30BC_N-QfcLgcik7dlDnlEqlaEkt7UVO_2eB-0IRBUSxOoTsg9gx4h2V1ytOU6_X6bxGj0TsEwX4ha37ZeOeZpF85xwaN8clnyyB3dPGQ_04KU0QkJwnJOo3hnVE1oqY1NvXCsu6ZjETol7ZWQ-mhgWWJP4_0CTZYeCfRno1MmSYDbiu96-DKWzcQUnP77tvHxPRT800WNyp473nLCUMKP18eEdrThmgsStvIzTloHkXaFSheDjMY8FqXnhlM"/>
+</div>
+<div class="w-full md:w-2/3">
+<span class="text-tertiary text-xs font-bold uppercase tracking-widest block mb-4">The Vision</span>
+<h2 class="text-3xl md:text-5xl font-display font-bold mb-6 leading-tight">Simplifying systems through APIs and integrations</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        I am a middleware engineer passionate about building seamless integrations, scalable APIs, and digital solutions that simplify complex business processes
+                    </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex flex-col">
+<span class="text-2xl font-display font-bold text-primary">3+</span>
+<span class="text-[10px] uppercase font-medium tracking-widest text-on-surface-variant">Years Exp.</span>
+</div>
+<div class="w-px h-10 bg-outline-variant/20 mx-4"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-display font-bold text-primary">10+</span>
+<span class="text-[10px] uppercase font-medium tracking-widest text-on-surface-variant">Integration flows</span>
+</div>
+<div class="w-px h-10 bg-outline-variant/20 mx-4"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-display font-bold text-primary">100%</span>
+<span class="text-[10px] uppercase font-medium tracking-widest text-on-surface-variant">Passion for API</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ReactionBar (Side Floating Menu) -->
+<!-- <aside class="fixed right-6 bottom-32 hidden lg:flex flex-col gap-6 z-40">
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mb-1 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Like</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mb-1 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_to_photos</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Save</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mb-1 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Share</span>
+</div>
+</aside> -->
+<!-- BottomNavBar (Mobile & Tablet) -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm glass-nav rounded-full px-4 py-3 flex justify-between items-center z-50 neon-glow">
+<a class="flex flex-col items-center gap-1 px-4" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+<span class="text-[10px] font-bold text-on-surface">BUILD</span>
+</a>
+<a class="flex flex-col items-center gap-1 px-4 opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">settings_ethernet</span>
+<span class="text-[10px] font-bold text-on-surface">STACK</span>
+</a>
+<a class="flex flex-col items-center gap-1 px-4 opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">connect_without_contact</span>
+<span class="text-[10px] font-bold text-on-surface">CONNECT</span>
+</a>
+</nav>
+<!-- Contextual FAB (Suppressed on details, visible on home) -->
+<button class="fixed bottom-24 right-6 w-14 h-14 primary-gradient rounded-full flex items-center justify-center text-on-primary shadow-2xl z-40 md:hidden neon-glow">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</body></html>
